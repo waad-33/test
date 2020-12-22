@@ -1,0 +1,136 @@
+body{
+--accent-color: black;
+--background-color: #d8d8d8;
+--text-decoration-color: black;
+--button-text-color: var(--background-color);
+--transition-delay: 1s;
+
+
+
+height: 20vh;
+margin-right: 0px;
+overflow: hidden;
+background-color: var(--background-color);
+color: var(--text-decoration-color);
+transition: var(--transition-delay);
+}
+body.dark{
+--accent-color:;
+--background-color: #333;
+--text-decoration-color: white;
+}
+
+
+.dark h1{
+	color: #ED57CF;
+}
+
+.theme-toggle-button{
+	background-color: var(--accent-color);
+	color: var(--button-text-color);
+	position: relative;
+	left: 1000px;
+	cursor: pointer;
+	padding-right: .5em 1em;
+	border-radius: .3em;
+	border: none;
+	outline: none;
+	transition: var(--transition-delay);
+	transform: scale(1);
+}
+#candy p{
+	text-align: left;
+	width: 500px;
+	height: 80px;
+
+}
+#candy-1 p{
+	position: absolute;
+	top: 128px;
+	left: 550px;
+
+	width: 500px;
+	height: 80px;
+}
+#text {
+	width: 1000px;
+	padding: 4px;
+	margin-top: 25px;
+}
+.dark #text{
+	background-color: #646464;
+}
+#mail{
+	width: 1000px;
+	padding: 4px;
+	margin-top: 10px;
+}
+.dark #mail{
+	background-color: #646464;
+}
+.dark .icon{
+	color: #ffa500;
+}
+#save-1 {
+	margin-top: 10px;
+	margin-left: 840px;
+	width: 85px;
+	height: 30px;
+	background-color: #65005e;
+}
+.dark #save-1{
+	background-color: #ED57CF;
+}
+#save-2{
+width: 80px;
+height: 30px;
+background-color: #ff03ee;	
+}
+.dark #save-2{
+	background-color: #57CFED;
+}
+.theme-toggle-button .icon{
+	margin-right: .5em;
+}
+.theme-toggle-button:hover,
+.theme-toggle-button:focus{
+	transform: scale(1.1);
+}
+.sun-moon-container{
+	--rotation: 0;
+	position: absolute;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	height: 200vmin;
+	transform: rotate(var(--rotation));
+	transition: transform var(--transition-delay);
+}
+.sun,
+.moon{
+	position: absolute;
+	transition: opacity,fill, var(--transition-delay);
+	width: 30px;
+	height: 30px;
+	fill: var(--accent-color);
+}
+.dark .sun.moon-container{
+	--rotation:180deg;
+}
+.sun{
+top: 5%;
+opacity: 1;
+}
+.dark .sun{
+	opacity: 0;
+}
+.moon{
+bottom: 5%;
+opacity: 0;
+transform: rotate(180deg);
+}
+.dark .moon{
+	opacity: 1;
+}
